@@ -35,5 +35,7 @@ Artisan::command('send-weekly-users-report', function () {
 
     // Optionally, delete the file after sending the email to free up space
     // Storage::delete('weekly_new_users.csv');
-})->purpose('Send weekly report of new users as CSV')->weeklyOn(1, '8:00');
+})
+// ->purpose('Send weekly report of new users as CSV')->everyMinute();
+->purpose('Send weekly report of new users as CSV')->weeklyOn(1, '8:00');
 
